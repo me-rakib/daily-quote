@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;700&family=Roboto:wght@100;400&display=swap');
+.font-advent {
+    font-family: Advent pro;
+}
+
+.font-roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    background: url(../img/public-background-img.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.public-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

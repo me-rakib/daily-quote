@@ -1,4 +1,3 @@
-
 // button
 const countClick = document.getElementById("count-click");
 const btn = document.getElementById("get-more-btn");
@@ -7,18 +6,14 @@ const authorName = document.querySelector(".author-name");
 
 
 // fetch data and display
-let count = 1;
+let countnum = 1;
 btn.addEventListener("click", function () {
-  count++;
-  countClick.textContent = count;
+  countnum++;
+  countClick.textContent = countnum;
 
-  fetch("./assets/data/data.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const randomNum = getRandomNumber(0, data.quotes.length);
-      quote.textContent = data.quotes[randomNum].quote;
-      authorName.textContent = data.quotes[randomNum].author;
-    });
+       const randomNum = getRandomNumber(0, quoteData.length);
+      quote.textContent = quoteData[randomNum].text;
+      authorName.textContent = quoteData[randomNum].author;
 });
 
 //will return a number in min<= number < max

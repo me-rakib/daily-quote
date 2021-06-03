@@ -12,7 +12,7 @@ btn.addEventListener("click", function () {
   countClick.textContent = countnum;
 
        const randomNum = getRandomNumber(0, quoteData.length);
-      quote.textContent = quoteData[randomNum].text;
+      quote.textContent = quoteData[randomNum].content;
       authorName.textContent = quoteData[randomNum].author;
 });
 

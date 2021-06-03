@@ -1,4 +1,5 @@
-const BASE_URL = "https://goquotes-api.herokuapp.com/api/v1/all/quotes";
+// const BASE_URL = "https://goquotes-api.herokuapp.com/api/v1/all/quotes";
+const BASE_URL = "https://quotable.io/quotes?page=1"
 
 const getRequest = (url) => {
     return new Promise((resolve, reject) => {
@@ -22,6 +23,7 @@ const getRequest = (url) => {
 
 let quoteData = {}
 getRequest(BASE_URL)
-    .then((data) => {
-      quoteData = data.quotes 
-  })
+.then(data => {
+    quoteData = data.results
+    console.log(data.results)
+})
